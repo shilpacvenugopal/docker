@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  data-service:
+    build:
+      context: ./data-service
+    ports:
+      - "5000:80"
+    depends_on:
+      - logging-service
+
+  processing-service:
+    build:
+      context: ./processing-service
+    ports:
+      - "5001:80"
+    depends_on:
+      - data-service
+      - logging-service
+
+  logging-service:
+    build:
+      context: ./logging-service
+    ports:
+      - "5002:80"
