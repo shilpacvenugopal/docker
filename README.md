@@ -1,4 +1,11 @@
+1. **Clone the Repository:**
 
+ ```bash
+   git clone https://github.com/shilpacvenugopal/docker.git
+   ```
+```bash
+   cd docker/
+   ```
 
 # Dockerized Python Microservices Application
 
